@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_app/base/res/styles/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,7 +10,44 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            child: Text("Hello home screen"),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Good morning",
+                          style: AppStyles.headLineStyle3,
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "Book Tickets",
+                          style: AppStyles.headLineStyle1,
+                        ),
+                      ],
+                    ),
+                    Container(
+                      width: 100,
+                      height: 70,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Search icon"),
+                    Text("Empty space"),
+                  ],
+                )
+              ],
+            ),
           )
         ],
       ),
